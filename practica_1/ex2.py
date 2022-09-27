@@ -8,21 +8,24 @@ def CrearCadena(numero):
         cadena.append(i)
     return cadena
 
+#Definimos la función guarda en una matriz los números primos
 def Primos(cadena):
     primos=[]
     for i in range (1,len(cadena)+1):
+        # Mandamos a llamar la función que analizara cada número de cadena
         a=es_primo(i)
         if a==True:
             if i!=1:
                 primos.append(i)
     return primos
 
+#Definimos la función que analizará un número a la vez si es primo o no
 def es_primo(i):
     for n in range(2, i):
         if i % n == 0:
             return False
     return True
-        
+
 # Guardamos en una variable la posición 1 en la consola.
     # Para operaciones logicas lo guardamos como int
 numero=int(sys.argv[1])
